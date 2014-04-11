@@ -1,0 +1,218 @@
+/*
+ * Name: Ed Reckers
+ * Description: Simple single page website for Ed Reckers hosted on GitHub Pages.
+ * Author: Ed Reckers
+ * Version: 1.0.0
+ * Author URI: http://ereckers.github.io
+ * Business URI: http://www.redbridgenet.com
+ *
+ * Copyright (c) 2014 Ed Reckers. All rights reserved.
+ * http://www.redbridgenet.com
+ * 
+ * References:
+ * @palette http://www.colourlovers.com/palette/444487/Curiosity_Killed
+ */
+
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.blue {
+	background: #2E2633;
+	color: #fff;
+}
+
+.blue h3 {
+	background: #fff;
+	color: #2E2633;
+	font-size: 36px;
+	line-height: 100px;
+	margin: 10px;
+	padding: 2%;
+	position: relative;
+	text-align: center;
+}
+
+.content {
+	margin: auto;
+	padding: 20px;
+	width: 600px;
+}
+
+.content:after,.buttons::after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+.fixed-header {
+	background: #FFF;
+	box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+	display: none;
+	padding: 10px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10000;
+}
+
+.fixed-header .header-content {
+	margin: auto;
+	width: 600px;
+}
+
+.fixed-header .subheading {
+	display: none;
+}
+
+.fixed-header h1.title {
+	float: left;
+	font-size: 24px;
+	letter-spacing: -2px;
+	margin: 0;
+}
+.fixed-header h1.title a {
+	text-decoration: none;
+}
+
+.fixed-header ul.nav {
+	float: right;
+	margin: 0;
+	padding: 5px;
+}
+
+.fixed-header ul.nav li {
+	margin: 0 0 0 10px;
+}
+
+.header {
+	padding: 20px 0;
+}
+
+.margin-40 {
+	margin-bottom: 40px;
+}
+
+.more,.button.first {
+	margin-top: 40px;
+}
+
+.red {
+	background: #e74c3c;
+	color: #fff;
+}
+
+.subheading {
+	color: #555;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: 400;
+	margin: 10px auto;
+	text-align: center;
+}
+
+.white {
+	background: #fff;
+	color: #2E2633;
+}
+
+.white pre,.white hr {
+	background: #2E2633;
+}
+
+a {
+	color: #2E2633;
+}
+
+body,html {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	background: #fff;
+	font-family: 'Roboto', sans-serif;
+	height: 100%;
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+	text-rendering: optimizeLegibility;
+	width: 100%;
+}
+
+h1 {
+	color: #2E2633;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 72px;
+	font-weight: 400; 
+	line-height: 1.2;
+	margin: 0 auto 10px;
+	text-align: center;
+}
+
+h1.title {
+	font-size: 96px;
+	letter-spacing: -3px;
+}
+
+h2 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 36px;
+	margin: 20px auto;
+	text-align: center;
+}
+
+hr {
+	background: #fff;
+	border: 0;
+	height: 1px;
+	margin: 40px 0;
+}
+
+p {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.5;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+section {
+	width: 100%;
+}
+
+ul.nav {
+	margin-bottom: 0;
+	padding-left: 0;
+	text-align: center;
+}
+
+ul.nav li {
+	display: inline-block;
+	list-style-type: none;
+	margin: 0 20px;
+}
+
+ul.nav li a {
+	font-size: 12px;
+	text-decoration: none;
+}
+
+@media (max-width: 420px) {
+	ul.nav li a {
+		display: block;
+		font-size: 10px;
+	}
+}
+
+@media (max-width: 768px) {
+	.blue h3 {
+		font-size: 24px;
+	}
+	.content {
+		margin: auto;
+		padding: 20px 40px;
+		width: auto;
+	}
+	.fixed-header .header-content {
+		width: auto;
+	}
+}
