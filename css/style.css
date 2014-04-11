@@ -81,6 +81,7 @@ section {
 	display: table;
 }
 
+
 .fixed-header {
 	background: #FFF;
 	box-shadow: 2px 0 5px rgba(0,0,0,0.5);
@@ -91,7 +92,6 @@ section {
 	width: 100%;
 	z-index: 10000;
 }
-
 .fixed-header .header-content {
 	margin: auto;
 	width: 600px;
@@ -119,6 +119,13 @@ section {
 
 .header {
 	padding: 20px 0;
+}
+.header {
+	background-image: url(img/bg-normal.jpg);
+	background-image: url(https://pickcrew.com/img/hero-home.jpg);
+	background: no-repeat center center;
+	background-size: cover;
+	overflow: hidden;
 }
 
 .subheading {
@@ -151,6 +158,25 @@ section {
 }
 .white pre,.white hr {
 	background: #2E2633;
+}
+
+/* Bootstrap Overrides */
+.nav>li>a {
+	position: relative;
+	display: block;
+	padding: 0px;
+}
+ul.nav li {
+	display: inline-block;
+	list-style-type: none;
+	margin: 0px;
+}
+ul.nav li a:hover {
+	background-color: transparent;
+	color: inherit;
+}
+ul.nav li:hover {
+	background-color: transparent;
 }
 
 ul.nav {
