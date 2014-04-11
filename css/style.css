@@ -22,7 +22,6 @@ body,html {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	background: #fff;
-	background-image: url(img/bg-big.jpg);
 	font-family: 'Roboto', sans-serif;
 	height: 100%;
 	line-height: 1;
@@ -67,6 +66,16 @@ p {
 a {
 	color: #2E2633;
 }
+a:hover {
+	color: #99173C;
+	text-decoration: none;
+}
+.solid a {
+	color: #FFF;
+}
+.solid a:hover {
+	color: #EFFFCD;
+}
 section {
 	width: 100%;
 }
@@ -81,7 +90,6 @@ section {
 	content: "";
 	display: table;
 }
-
 
 .fixed-header {
 	background: #FFF;
@@ -122,10 +130,20 @@ section {
 	padding: 20px 0;
 }
 .header {
+	/*
 	display: block;
-	background-image: url(img/bg-normal.jpg);
-	background-image: url(https://pickcrew.com/img/hero-home.jpg);
-	background: no-repeat center center;
+	background-image: url(../img/bg-normal.jpg);
+	background-position: no-repeat center center;
+	background-size: cover;
+	overflow: hidden;
+	*/
+}
+#photo {
+	color: #EFFFCD;
+	min-height: 600px;
+	display: block;
+	background-image: url(../img/bg-normal.jpg);
+	background-position: no-repeat center center;
 	background-size: cover;
 	overflow: hidden;
 }
@@ -136,14 +154,15 @@ section {
 	font-style: italic;
 	font-weight: 400;
 	margin: 10px auto;
+	margin-bottom: 20px;
 	text-align: center;
 }
 
-.blue {
+.solid {
 	background: #2E2633;
 	color: #fff;
 }
-.blue h3 {
+.solid h3 {
 	background: #fff;
 	color: #2E2633;
 	font-size: 36px;
@@ -162,7 +181,7 @@ section {
 	background: #2E2633;
 }
 
-/* Bootstrap Overrides */
+/* Bootstrap Navigation Overrides */
 .nav>li>a {
 	position: relative;
 	display: block;
@@ -176,26 +195,59 @@ ul.nav li {
 ul.nav li a:hover {
 	background-color: transparent;
 	color: inherit;
+	color: #99173C;
 }
 ul.nav li:hover {
 	background-color: transparent;
 }
+/* Bootstrap Navigation Overrides END */
 
 ul.nav {
 	margin-bottom: 0;
 	padding-left: 0;
 	text-align: center;
 }
-
 ul.nav li {
 	display: inline-block;
 	list-style-type: none;
 	margin: 0 20px;
 }
-
 ul.nav li a {
 	font-size: 12px;
 	text-decoration: none;
+}
+
+.features {
+	display: block;
+	list-style-type: none;
+	margin-top: 30px;
+	padding: 0;
+	text-align: center;
+	font-size: 1.2em;
+}
+.features li {
+	margin: 20px 0;
+}
+
+.media img {
+	border: 4px solid #555152;
+	border: 4px solid #99173C;
+	border: 4px solid #DCE9BE;
+	border: 4px solid #EFFFCD;
+	border: 4px solid #2E2633;
+	border: 4px solid #EDEDED;
+}
+
+.fa {
+	margin-right: 20px;
+	color: #99173C;
+}
+.fa a {
+	color: #99173C;
+}
+
+.footer {
+	font-size: .9em;
 }
 
 @media (max-width: 420px) {
@@ -206,7 +258,7 @@ ul.nav li a {
 }
 
 @media (max-width: 768px) {
-	.blue h3 {
+	.solid h3 {
 		font-size: 24px;
 	}
 	.content {
