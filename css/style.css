@@ -11,6 +11,7 @@
  * 
  * References:
  * @palette http://www.colourlovers.com/palette/444487/Curiosity_Killed
+ * @filters http://code.tutsplus.com/tutorials/say-hello-to-css3-filters--net-23318
  *
  */
 
@@ -239,8 +240,6 @@ ul.nav li a {
  * About
  */
 img.about-pic {
-	height: 150px;
-	width: 150px;
 	margin-bottom: 25px;
 }
 
@@ -280,30 +279,37 @@ img.about-pic {
 	top: -20px;
 }
 a.twitter {
-	color: #2AA9E0;
+	color: #555;
 }
 a:hover.twitter {
-	color: inherit;
+	color: #2AA9E0;
 }
 .social-block .fa-linkedin {
 	left: 65px;
 	top: -24px;
 }
 a.linkedin {
-	color: #0274b3;
+	color: #555;
 }
 a:hover.linkedin {
-	color: inherit;
+	color: #0274b3;
 }
 .social-block .fa-google-plus {
 	left: 73px;
 	top: -20px;
 }
 a.google-plus {
-	color: #da2713;
+	color: #555;
 }
 a:hover.google-plus {
-	color: inherit;
+	color: #da2713;
+}
+
+img.img-rounded {
+	-webkit-filter: grayscale(100%);
+}
+img.img-rounded:hover {
+	-webkit-filter: grayscale(0%);
 }
 
 .footer {
