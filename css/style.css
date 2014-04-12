@@ -11,6 +11,7 @@
  * 
  * References:
  * @palette http://www.colourlovers.com/palette/444487/Curiosity_Killed
+ *
  */
 
 * {
@@ -55,12 +56,18 @@ hr {
 	height: 1px;
 	margin: 40px 0;
 }
-p {
+p,
+.media-body {
 	font-size: 18px;
-	font-weight: 700;
+	font-weight: 300;
 	line-height: 1.5;
 	margin-bottom: 40px;
+}
+p {
 	text-align: center;
+}
+.media-body {
+	font-size: 16px;
 }
 
 a {
@@ -76,13 +83,14 @@ a:hover {
 .solid a:hover {
 	color: #EFFFCD;
 }
+
 section {
 	width: 100%;
 }
-
 .content {
 	margin: auto;
 	padding: 20px;
+	padding-bottom: 50px;
 	width: 600px;
 }
 .content:after,.buttons::after {
@@ -129,30 +137,27 @@ section {
 .header {
 	padding: 20px 0;
 }
-.header {
-	/*
-	display: block;
-	background-image: url(../img/bg-normal.jpg);
-	background-position: no-repeat center center;
-	background-size: cover;
-	overflow: hidden;
-	*/
-}
 #photo {
-	color: #EFFFCD;
-	min-height: 600px;
+	min-height: 730px;
 	display: block;
-	background-image: url(../img/bg-normal.jpg);
+	background-image: url(../img/yellow-flowers-1400-50.jpg);
+	background-image: url(../img/doors-1400-50.jpg);
+	background-image: url(../img/drink-menu-1400-50.jpg);
+	background-image: url(../img/eucalyptus-1400-50.jpg);
 	background-position: no-repeat center center;
 	background-size: cover;
 	overflow: hidden;
+}
+#photo h2 {
+	color: #EFFFCD;
+	color: #2E2633;
 }
 
 .subheading {
 	color: #555;
 	font-size: 12px;
 	font-style: italic;
-	font-weight: 400;
+	font-weight: 300;
 	margin: 10px auto;
 	margin-bottom: 20px;
 	text-align: center;
@@ -221,6 +226,7 @@ ul.nav li a {
 	display: block;
 	list-style-type: none;
 	margin-top: 30px;
+	font-weight: 300;
 	padding: 0;
 	text-align: center;
 	font-size: 1.2em;
@@ -229,21 +235,75 @@ ul.nav li a {
 	margin: 20px 0;
 }
 
-.media img {
-	border: 4px solid #555152;
-	border: 4px solid #99173C;
-	border: 4px solid #DCE9BE;
-	border: 4px solid #EFFFCD;
-	border: 4px solid #2E2633;
-	border: 4px solid #EDEDED;
+/*
+ * About
+ */
+img.about-pic {
+	height: 150px;
+	width: 150px;
+	margin-bottom: 25px;
 }
 
-.fa {
-	margin-right: 20px;
-	color: #99173C;
+/*
+ * Projects
+ */
+.media {
+	margin-bottom: 40px;
 }
-.fa a {
-	color: #99173C;
+.media img {
+	padding: 4px;
+	border: 1px solid #DCE9BE;
+}
+.media img:hover {
+	padding: 0px;
+	border: 5px solid #DCE9BE;
+}
+
+/*
+ * Social Profile Images
+ */
+.social-row {
+	margin: 50px auto;
+}
+.social-block {
+	display: block;
+}
+.social-block img {
+	max-height: 75px;
+}
+.social-block .fa {
+	position: absolute;
+	z-index: 8;
+}
+.social-block .fa-twitter {
+	left: 90px;
+	top: -20px;
+}
+a.twitter {
+	color: #2AA9E0;
+}
+a:hover.twitter {
+	color: inherit;
+}
+.social-block .fa-linkedin {
+	left: 65px;
+	top: -24px;
+}
+a.linkedin {
+	color: #0274b3;
+}
+a:hover.linkedin {
+	color: inherit;
+}
+.social-block .fa-google-plus {
+	left: 73px;
+	top: -20px;
+}
+a.google-plus {
+	color: #da2713;
+}
+a:hover.google-plus {
+	color: inherit;
 }
 
 .footer {
