@@ -20,7 +20,7 @@ form.class : add 'form'
 </div>
 <div class="form-group">
 		<div>
-			<input id="saveForm" name="saveForm" class="btTxt submit btn btn-default" type="submit" value="Submit" />
+			<input id="saveForm" name="saveForm" class="btTxt submit btn btn-default btn-lg btn-block" type="submit" value="Submit Contact Form" />
 		</div>
 </div>
 	<div class="hide">
