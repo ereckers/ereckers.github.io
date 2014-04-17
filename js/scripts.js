@@ -17,4 +17,9 @@ $(document).ready(function() {
 		}, 300);
 	});
 
+	$.get( "../data.txt", function( data ) {
+		$( "#contact-form" ).html( data );
+		alert( "Load was performed." );
+	});
+
 });
