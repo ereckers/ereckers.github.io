@@ -1,6 +1,11 @@
 <div id="container" class="ltr">
 
-<form id="form2" name="form2" class="wufoo topLabel page" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://redbridgenet.wufoo.com/forms/mnegp2p0a60p63/#public">
+<!--
+Bootstrap Formatting
+form.class : add 'form'
+-->
+
+<form id="form2" name="form2" class="wufoo topLabel page form" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://redbridgenet.wufoo.com/forms/mnegp2p0a60p63/#public">
 <ul>
 	<li id="foli1" class="notranslate      ">
 		<label class="desc" id="title1" for="Field1">Email<span id="req_1" class="req">*</span></label>
