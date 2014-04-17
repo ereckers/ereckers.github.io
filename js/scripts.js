@@ -17,9 +17,9 @@ $(document).ready(function() {
 		}, 300);
 	});
 
-	$.get( "../mail/form.txt", function( data ) {
+	/* Load Wufoo Contact Form HTML : JS and CSS is loaded on index.html */
+	$.get( "../mail/wufoo-form.txt", function( data ) {
 		$( "#contact-form" ).html( data );
-		alert( "Load was performed." );
 	});
 
 });
