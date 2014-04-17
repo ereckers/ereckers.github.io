@@ -5,31 +5,29 @@ Bootstrap Formatting
 form.class : add 'form'
 -->
 
-<form id="form2" name="form2" class="wufoo topLabel page form" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://redbridgenet.wufoo.com/forms/mnegp2p0a60p63/#public">
-<ul>
-	<li id="foli1" class="notranslate      ">
+<form id="form2" name="form2" class="wufoo topLabel page" role="form" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://redbridgenet.wufoo.com/forms/mnegp2p0a60p63/#public">
+<div class="form-group">
 		<label class="desc" id="title1" for="Field1">Email<span id="req_1" class="req">*</span></label>
 		<div>
-			<input id="Field1" name="Field1" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="1" required /> 
+			<input id="Field1" name="Field1" type="email" spellcheck="false" class="field text medium form-control" value="" maxlength="255" tabindex="1" required /> 
 		</div>
-	</li>
-	<li id="foli2" class="notranslate      ">
+</div>
+<div class="form-group">
 		<label class="desc" id="title2" for="Field2">Message<span id="req_2" class="req">*</span></label>
 		<div>
-			<textarea id="Field2" name="Field2" class="field textarea small" spellcheck="true" rows="10" cols="50" tabindex="2" onkeyup="" required  ></textarea>
+			<textarea id="Field2" name="Field2" class="field textarea small form-control" spellcheck="true" rows="10" cols="50" tabindex="2" onkeyup="" required  ></textarea>
 		</div>
-	</li>
-	<li class="buttons ">
+</div>
+<div class="form-group">
 		<div>
-			<input id="saveForm" name="saveForm" class="btTxt submit" type="submit" value="Submit" />
+			<input id="saveForm" name="saveForm" class="btTxt submit btn btn-default" type="submit" value="Submit" />
 		</div>
-	</li>
-	<li class="hide">
+</div>
+	<div class="hide">
 		<label for="comment">Do Not Fill This Out</label>
 		<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
 		<input type="hidden" id="idstamp" name="idstamp" value="FuKoH5Ru/mB0+ptQNLdyIyyfqCOfIlUCe5m1ZHxsUZY=" />
-	</li>
-</ul>
+	</div>
 </form> 
 
 </div><!--container-->
