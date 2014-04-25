@@ -140,10 +140,10 @@ section {
 #photo {
 	min-height: 730px;
 	display: block;
-	background-image: url(../img/yellow-flowers-1400-50.jpg);
 	background-image: url(../img/doors-1400-50.jpg);
 	background-image: url(../img/drink-menu-1400-50.jpg);
 	background-image: url(../img/eucalyptus-1400-50.jpg);
+	background-image: url(../img/yellow-flowers-1400-50.jpg);
 	background-position: no-repeat center center;
 	background-size: cover;
 	overflow: hidden;
