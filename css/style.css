@@ -304,6 +304,16 @@ a.google-plus {
 a:hover.google-plus {
 	color: #da2713;
 }
+.social-block .fa-github {
+	left: 65px;
+	top: -20px;
+}
+a.github {
+	color: #555;
+}
+a:hover.github {
+	color: #333333;
+}
 
 img.img-rounded {
 	-webkit-filter: grayscale(100%);
