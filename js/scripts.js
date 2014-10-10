@@ -18,8 +18,10 @@ $(document).ready(function() {
 	});
 
 	/* Load Wufoo Contact Form HTML : JS and CSS is loaded on index.html */
+	/* Replaced w/ Mandrill API Oct 9, 2014
 	$.get( "../mail/wufoo-form.txt", function( data ) {
 		$( "#contact-form" ).html( data );
 	});
+	*/
 
 });

@@ -185,9 +185,49 @@ ga('send', 'pageview');
 	<section id="contact" class="white">
 		<div class="content">
 			<h2>Contact</h2>
-			<p>Contact Ed Reckers with this <i>Wufoo</i> contact form. You will be redirected to a <i>Wufoo</i> hosted Thank You page.</p>
+			<p>Complete and submit this form to contact Ed Reckers.</p>
 
-			<div id="contact-form"></div>
+
+
+
+<div id="contact-form">
+
+	<div class="message success-message">Thanks for Contacting Me!</div>
+
+	<div id="container" class="ltr">
+
+		<form id="contact_form" class="">
+			<div class="form-group">
+				<label for="Name">Name<span id="req_1" class="req">*</span></label>
+				<div>
+					<input id="name" name="name" type="text" class="field text medium form-control" placeholder="Name" value="" tabindex="1">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="Email">Email<span id="req_1" class="req">*</span></label>
+				<div>
+					<input id="email" name="email" type="email" class="field text medium form-control" placeholder="Email" value="" tabindex="2">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="Message">Message<span id="req_2" class="req">*</span></label>
+				<div>
+					<textarea id="message" name="message" class="field textarea small form-control" placeholder="Message" rows="10" cols="50" tabindex="3"></textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<div>
+					<input id="submit" name="Submit" class="btTxt submit btn btn-default btn-lg btn-block" type="submit" value="Submit Contact Form" />
+				</div>
+			</div>
+		</form>
+	</div><!--container-->
+
+</div>
+
+
+
+
 
 			<hr>
 			<h2>Social</h2>
@@ -240,14 +280,56 @@ ga('send', 'pageview');
 		</div>
 	</section>
 
-	<!-- Wufoo JavaScript -->
-	<script src="mail/scripts/wufoo.js"></script>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<!-- Latest compiled and minified Bootstrap JavaScript -->
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	<!-- Custom JavaScript -->
 	<script type="text/javascript" src="js/scripts.js"></script>
+
+<script>
+jQuery(function($)  
+{
+    $("#contact_form").submit(function()
+    {
+        var email = $("#email").val(); // get email field value
+        var name = $("#name").val(); // get name field value
+        var message = $("#message").val(); // get message field value
+        $.ajax(
+        {
+            type: "POST",
+            url: "https://mandrillapp.com/api/1.0/messages/send.json",
+            data: {
+                'key': 'KIR92sHSFNlYIjMgCHoakw',
+                'message': {
+                    'from_email': email,
+                    'from_name': name,
+                    'headers': {
+                        'Reply-To': email
+                    }, 'subject': 'Contact from edreckers.com Form',
+                    'text': message,
+                    'to': [
+                    {
+                        'email': 'ed@redbridgenet.com',
+                        'name': 'Ed Reckers',
+                        'type': 'to'
+                    }]
+                }
+            }
+        })
+        .done(function(response) {
+            alert('Your message has been sent. Thank you!'); // show success message
+            $("#name").val(''); // reset field after successful submission
+            $("#email").val(''); // reset field after successful submission
+            $("#message").val(''); // reset field after successful submission
+        })
+        .fail(function(response) {
+            alert('Error sending message.');
+        });
+        return false; // prevent page refresh
+    });
+});
+</script>
 
 </body>
 </html>

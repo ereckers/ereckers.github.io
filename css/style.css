@@ -326,6 +326,10 @@ img.img-rounded:hover {
 	font-size: .9em;
 }
 
+label {
+	display: none;
+}
+
 @media (max-width: 420px) {
 	ul.nav li a {
 		display: block;
