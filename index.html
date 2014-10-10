@@ -192,7 +192,7 @@ ga('send', 'pageview');
 
 <div id="contact-form">
 
-	<div class="message success-message">Thanks for Contacting Me!</div>
+	<div class="alert alert-success success-message" role="alert">Thanks for Contacting Me!</div>
 
 	<div id="container" class="ltr">
 
@@ -217,7 +217,7 @@ ga('send', 'pageview');
 			</div>
 			<div class="form-group">
 				<div>
-					<input id="submit" name="Submit" class="btTxt submit btn btn-default btn-lg btn-block" type="submit" value="Submit Contact Form" />
+					<input id="submit" name="Submit" class="btTxt submit btn btn-default btn-lg btn-block" type="submit" tabindex="4" value="Submit Contact Form" />
 				</div>
 			</div>
 		</form>
@@ -290,6 +290,9 @@ ga('send', 'pageview');
 <script>
 jQuery(function($)  
 {
+	// hide success message
+	$( ".success-message" ).hide();
+
     $("#contact_form").submit(function()
     {
         var email = $("#email").val(); // get email field value
@@ -318,7 +321,8 @@ jQuery(function($)
             }
         })
         .done(function(response) {
-            alert('Your message has been sent. Thank you!'); // show success message
+            //alert('Your message has been sent. Thank you!'); // show success message
+			$( ".success-message" ).show();
             $("#name").val(''); // reset field after successful submission
             $("#email").val(''); // reset field after successful submission
             $("#message").val(''); // reset field after successful submission
