@@ -32,10 +32,10 @@ body,html {
 	padding: 0;
 	text-rendering: optimizeLegibility;
 	width: 100%;
-
+}
+body {
     background: #FFF url('http://www.redbridgenet.com/wp-content/themes/feather/assets/img/golden-gate-view.jpg') no-repeat center center fixed;
     background-size: cover;
-
 }
 h1 {
 	color: #2E2633;
