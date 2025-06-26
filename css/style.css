@@ -3,16 +3,16 @@
  * Description: Simple single page website for Ed Reckers hosted on GitHub Pages.
  * Author: Ed Reckers
  * Version: 1.0.0
- * Author URI: http://ereckers.github.io
- * Business URI: http://www.redbridgenet.com
+ * Author URI: https://ereckers.github.io
+ * Business URI: https://www.redbridgenet.com
  *
  * Copyright (c) 2014 Ed Reckers. All rights reserved.
- * http://www.redbridgenet.com
+ * https://www.redbridgenet.com
  * 
  * References:
- * @palette http://www.colourlovers.com/palette/444487/Curiosity_Killed
- * @filters http://code.tutsplus.com/tutorials/say-hello-to-css3-filters--net-23318
- * @markup http://kenwheeler.github.io/slick/
+ * @palette https://www.colourlovers.com/palette/444487/Curiosity_Killed
+ * @filters https://code.tutsplus.com/tutorials/say-hello-to-css3-filters--net-23318
+ * @markup https://kenwheeler.github.io/slick/
  *
  */
 
@@ -144,14 +144,18 @@ section {
 	background-image: url(../img/doors-1400-50.jpg);
 	background-image: url(../img/drink-menu-1400-50.jpg);
 	background-image: url(../img/eucalyptus-1400-50.jpg);
-	background-image: url(../img/yellow-flowers-1400-50.jpg);
+	background-image: url(../img/drink-menu-1400-50.jpg);
 	background-position: no-repeat center center;
 	background-size: cover;
 	overflow: hidden;
 }
 #photo h2 {
 	color: #EFFFCD;
-	color: #2E2633;
+	color: #fff;
+}
+
+#photo .subheading {
+	color: #fff;
 }
 
 .subheading {
