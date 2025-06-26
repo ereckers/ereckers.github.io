@@ -245,6 +245,7 @@ ul.nav li a {
  */
 img.about-pic {
 	margin-bottom: 25px;
+	max-width: 150px;
 }
 
 /*
