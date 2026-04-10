@@ -1,27 +1,19 @@
 $(document).ready(function() {
 
-	$(window).on('scroll', function() {
-		if ($(window).scrollTop() > 166) {
-			$('.fixed-header').show();
-		} else {
-			$('.fixed-header').hide();
-		}
-	});
+  $(window).on('scroll', function() {
+    if ($(window).scrollTop() > 80) {
+      $('#nav-fixed').addClass('visible');
+    } else {
+      $('#nav-fixed').removeClass('visible');
+    }
+  });
 
-	$('ul.nav a').on('click', function(event) {
-		event.preventDefault();
-		var targetID = $(this).attr('href');
-		var targetST = $(targetID).offset().top - 48;
-		$('body, html').animate({
-			scrollTop: targetST + 'px'
-		}, 300);
-	});
-
-	/* Load Wufoo Contact Form HTML : JS and CSS is loaded on index.html */
-	/* Replaced w/ Mandrill API Oct 9, 2014
-	$.get( "../mail/wufoo-form.txt", function( data ) {
-		$( "#contact-form" ).html( data );
-	});
-	*/
+  $('a[href^="#"]').on('click', function(event) {
+    var target = $(this).attr('href');
+    if (target === '#') return;
+    event.preventDefault();
+    var offset = $(target).offset().top - 60;
+    $('html, body').animate({ scrollTop: offset }, 300);
+  });
 
 });
