@@ -1,0 +1,357 @@
+/*
+ * Name: Ed Reckers
+ * Description: Simple single page website for Ed Reckers hosted on GitHub Pages.
+ * Author: Ed Reckers
+ * Version: 1.0.0
+ * Author URI: https://ereckers.github.io
+ * Business URI: https://www.redbridgenet.com
+ *
+ * Copyright (c) 2014 Ed Reckers. All rights reserved.
+ * https://www.redbridgenet.com
+ * 
+ * References:
+ * @palette https://www.colourlovers.com/palette/444487/Curiosity_Killed
+ * @filters https://code.tutsplus.com/tutorials/say-hello-to-css3-filters--net-23318
+ * @markup https://kenwheeler.github.io/slick/
+ *
+ */
+
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body,html {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	background: #fff;
+	font-family: 'Roboto', sans-serif;
+	height: 100%;
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+	text-rendering: optimizeLegibility;
+	width: 100%;
+}
+h1 {
+	color: #2E2633;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 72px;
+	font-weight: 400; 
+	line-height: 1.2;
+	margin: 0 auto 10px;
+	text-align: center;
+}
+h1.title {
+	letter-spacing: -3px;
+}
+h2 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 36px;
+	margin: 20px auto;
+	text-align: center;
+}
+hr {
+	background: #fff;
+	border: 0;
+	height: 1px;
+	margin: 40px 0;
+}
+p,
+.media-body {
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 1.5;
+	margin-bottom: 40px;
+}
+p {
+	text-align: center;
+}
+.media-body {
+	font-size: 16px;
+}
+
+a {
+	color: #2E2633;
+}
+a:hover {
+	color: #99173C;
+	text-decoration: none;
+}
+.solid a {
+	color: #FFF;
+}
+.solid a:hover {
+	color: #EFFFCD;
+}
+
+section {
+	width: 100%;
+}
+.content {
+	margin: auto;
+	padding: 20px;
+	padding-bottom: 50px;
+	width: 600px;
+}
+.content:after,.buttons::after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+.fixed-header {
+	background: #FFF;
+	box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+	display: none;
+	padding: 10px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10000;
+}
+.fixed-header .header-content {
+	margin: auto;
+	width: 600px;
+}
+.fixed-header .subheading {
+	display: none;
+}
+.fixed-header h1.title {
+	float: left;
+	font-size: 24px;
+	letter-spacing: -2px;
+	margin: 0;
+}
+.fixed-header h1.title a {
+	text-decoration: none;
+}
+.fixed-header ul.nav {
+	float: right;
+	margin: 0;
+	padding: 5px;
+}
+.fixed-header ul.nav li {
+	margin: 0 0 0 10px;
+}
+
+.header {
+	padding: 20px 0;
+}
+#photo {
+	min-height: 730px;
+	display: block;
+	background-image: url(../../img/doors-1400-50.jpg);
+	background-image: url(../../img/drink-menu-1400-50.jpg);
+	background-image: url(../../img/eucalyptus-1400-50.jpg);
+	background-image: url(../../img/drink-menu-1400-50.jpg);
+	background-position: no-repeat center center;
+	background-size: cover;
+	overflow: hidden;
+}
+#photo h2 {
+	color: #EFFFCD;
+	color: #fff;
+}
+
+#photo .subheading {
+	color: #fff;
+}
+
+.subheading {
+	color: #555;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: 300;
+	margin: 10px auto;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.solid {
+	background: #2E2633;
+	color: #fff;
+}
+.solid h3 {
+	background: #fff;
+	color: #2E2633;
+	font-size: 36px;
+	line-height: 100px;
+	margin: 10px;
+	padding: 2%;
+	position: relative;
+	text-align: center;
+}
+
+.white {
+	background: #fff;
+	color: #2E2633;
+}
+.white pre,.white hr {
+	background: #2E2633;
+}
+
+/* Bootstrap Navigation Overrides */
+.nav>li>a {
+	position: relative;
+	display: block;
+	padding: 0px;
+}
+ul.nav li {
+	display: inline-block;
+	list-style-type: none;
+	margin: 0px;
+}
+ul.nav li a:hover {
+	background-color: transparent;
+	color: inherit;
+	color: #99173C;
+}
+ul.nav li:hover {
+	background-color: transparent;
+}
+/* Bootstrap Navigation Overrides END */
+
+ul.nav {
+	margin-bottom: 0;
+	padding-left: 0;
+	text-align: center;
+}
+ul.nav li {
+	display: inline-block;
+	list-style-type: none;
+	margin: 0 20px;
+}
+ul.nav li a {
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.features {
+	display: block;
+	list-style-type: none;
+	margin-top: 30px;
+	font-weight: 300;
+	padding: 0;
+	text-align: center;
+	font-size: 1.2em;
+}
+.features li {
+	margin: 20px 0;
+}
+
+/*
+ * About
+ */
+img.about-pic {
+	margin-bottom: 25px;
+	max-width: 150px;
+}
+
+/*
+ * Projects
+ */
+.media {
+	margin-bottom: 40px;
+}
+.media img {
+	padding: 4px;
+	border: 1px solid #DCE9BE;
+}
+.media img:hover {
+	padding: 0px;
+	border: 5px solid #DCE9BE;
+}
+
+/*
+ * Social Profile Images
+ */
+.social-row {
+	margin: 50px auto;
+}
+.social-block {
+	display: block;
+}
+.social-block img {
+	max-height: 75px;
+}
+.social-block .fa {
+	position: absolute;
+	z-index: 8;
+}
+.social-block .fa-twitter {
+	left: 90px;
+	top: -20px;
+}
+a.twitter {
+	color: #555;
+}
+a:hover.twitter {
+	color: #2AA9E0;
+}
+.social-block .fa-linkedin {
+	left: 65px;
+	top: -24px;
+}
+a.linkedin {
+	color: #555;
+}
+a:hover.linkedin {
+	color: #0274b3;
+}
+.social-block .fa-google-plus {
+	left: 73px;
+	top: -20px;
+}
+a.google-plus {
+	color: #555;
+}
+a:hover.google-plus {
+	color: #da2713;
+}
+.social-block .fa-github {
+	left: 65px;
+	top: -20px;
+}
+a.github {
+	color: #555;
+}
+a:hover.github {
+	color: #333333;
+}
+
+img.img-rounded {
+	-webkit-filter: grayscale(100%);
+}
+img.img-rounded:hover {
+	-webkit-filter: grayscale(0%);
+}
+
+.footer {
+	font-size: .9em;
+}
+
+label {
+	display: none;
+}
+
+@media (max-width: 420px) {
+	ul.nav li a {
+		display: block;
+		font-size: 10px;
+	}
+}
+
+@media (max-width: 768px) {
+	.solid h3 {
+		font-size: 24px;
+	}
+	.content {
+		margin: auto;
+		padding: 20px 40px;
+		width: auto;
+	}
+	.fixed-header .header-content {
+		width: auto;
+	}
+}
