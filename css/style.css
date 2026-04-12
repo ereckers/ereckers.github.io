@@ -629,9 +629,9 @@ textarea.form-control {
   transform: translateY(-3px);
 }
 
-.social-btn.twitter:hover {
-  background: rgba(29, 161, 242, 0.1);
-  border-color: rgba(29, 161, 242, 0.4);
+.social-btn.x-twitter:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
   box-shadow: 0 0 24px rgba(29, 161, 242, 0.2);
   color: #1da1f2;
 }
