@@ -196,19 +196,23 @@ ga('send', 'pageview');
     <p style="text-align:center;color:var(--text-dim);font-size:0.9rem;margin-bottom:2rem;">Complete and submit this form to contact Ed Reckers.</p>
 
     <div class="form-card">
-      <div class="success-message" id="success-message">Thanks for reaching out!</div>
+      <div data-fs-success class="success-message">Thanks for reaching out!</div>
+      <div data-fs-error class="fs-form-error"></div>
       <form id="contact_form">
         <div class="form-group">
-          <input id="name" name="name" type="text" class="form-control" placeholder="Name" tabindex="1">
+          <input id="name" name="name" type="text" class="form-control" placeholder="Name" data-fs-field tabindex="1">
+          <span data-fs-error="name" class="fs-field-error"></span>
         </div>
         <div class="form-group">
-          <input id="email" name="email" type="email" class="form-control" placeholder="Email" tabindex="2">
+          <input id="email" name="email" type="email" class="form-control" placeholder="Email" data-fs-field tabindex="2">
+          <span data-fs-error="email" class="fs-field-error"></span>
         </div>
         <div class="form-group">
-          <textarea id="message" name="message" class="form-control" placeholder="Message" tabindex="3"></textarea>
+          <textarea id="message" name="message" class="form-control" placeholder="Message" data-fs-field tabindex="3"></textarea>
+          <span data-fs-error="message" class="fs-field-error"></span>
         </div>
         <div class="form-group">
-          <button type="submit" class="btn-submit" tabindex="4">Send Message</button>
+          <button type="submit" class="btn-submit" data-fs-submit-btn tabindex="4">Send Message</button>
         </div>
       </form>
     </div>
@@ -239,39 +243,10 @@ ga('send', 'pageview');
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="js/scripts.js"></script>
 <script>
-jQuery(function($) {
-  $('#success-message').hide();
-
-  $('#contact_form').submit(function() {
-    var email   = $('#email').val();
-    var name    = $('#name').val();
-    var message = $('#message').val();
-    $.ajax({
-      type: 'POST',
-      url: 'https://mandrillapp.com/api/1.0/messages/send.json',
-      data: {
-        'key': 'KIR92sHSFNlYIjMgCHoakw',
-        'message': {
-          'from_email': email,
-          'from_name':  name,
-          'headers':    { 'Reply-To': email },
-          'subject':    'Contact from edreckers.com Form',
-          'text':       message,
-          'to': [{ 'email': 'ed@redbridgenet.com', 'name': 'Ed Reckers', 'type': 'to' }]
-        }
-      }
-    })
-    .done(function() {
-      $('#success-message').show();
-      $('#name, #email, #message').val('');
-    })
-    .fail(function() {
-      alert('Error sending message.');
-    });
-    return false;
-  });
-});
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#contact_form', formId: 'xpqkajwz' });
 </script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </body>
 </html>

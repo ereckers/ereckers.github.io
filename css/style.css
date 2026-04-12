@@ -602,6 +602,34 @@ textarea.form-control {
 }
 
 /* ============================================
+   Formspree error/success states
+   ============================================ */
+[data-fs-success] { display: none; }
+
+.fs-form-error {
+  background: rgba(248, 113, 113, 0.08);
+  border: 1px solid rgba(248, 113, 113, 0.3);
+  border-radius: var(--radius);
+  color: #f87171;
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
+  padding: 0.875rem 1rem;
+  text-align: center;
+}
+
+.fs-field-error {
+  color: #f87171;
+  display: block;
+  font-size: 0.78rem;
+  margin-top: 0.375rem;
+}
+
+.form-control[aria-invalid="true"] {
+  border-color: rgba(248, 113, 113, 0.5);
+  box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.08);
+}
+
+/* ============================================
    Social
    ============================================ */
 .social-grid {
