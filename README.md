@@ -1,18 +1,32 @@
 ereckers.github.io
 ==================
 
-Personal web page for Ed Reckers <www.edreckers.com> hosted on GitHub Pages.
+Personal one-page static website for Ed Reckers, hosted on GitHub Pages at
+[www.edreckers.com](https://www.edreckers.com).
+
+No build tooling — edit the files directly and push to `master` to deploy.
+
+### Structure
+
+* `index.html` — single page with all sections inline (hero, about, projects, photo, contact).
+* `css/style.css` — all styles, using CSS custom properties for the dark theme.
+* `js/scripts.js` — jQuery for the scroll-triggered fixed nav and smooth-scroll anchors.
+
+External dependencies (jQuery, Font Awesome, Google Fonts) are loaded from CDN.
+The `old/` directory holds the pre-redesign version of the site.
+
+### Local preview
+
+```bash
+python3 -m http.server 8000
+```
 
 ### DNS
 
-CNAME points to www.edreckers.com. A redirection at edreckers.com hosted on WP Engine points 301 Redirects edreckers.com=> www.edreckers.com.
+The `CNAME` file points GitHub Pages to `www.edreckers.com`. A redirect hosted on
+WP Engine issues a 301 from `edreckers.com` to `www.edreckers.com`.
 
-### Emailing
+### Contact form
 
-Using Mandrill API + AJAX to send this form.
-
-#### References
-
-* https://www.mandrill.com/
-* http://codepen.io/webcane/pen/LBspI
-* https://medium.com/@mariusc23/send-an-email-using-only-javascript-b53319616782
+The contact form submits via [Formspree](https://formspree.io/) (AJAX), using the
+`@formspree/ajax` client. The form ID is configured inline in `index.html`.
